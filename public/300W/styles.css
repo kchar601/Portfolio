@@ -1,0 +1,34 @@
+.text-light:hover{
+  color: black !important;
+}
+
+.bg-primary{
+  background-color: #041E42 !important;
+  color: white !important;
+}
+
+h4{
+  margin-left: 5px !important;
+  color: rgb(150,190,230) !important;
+}
+
+.border-primary{
+  border-color: rgb(150,190,230) !important;
+}
+
+.popover {
+  background: #CCDAE6;
+}
+.popover-header{
+  background: #6c757d;
+}
+
+.change-to-column{
+  height:fit-content;
+}
+
+@media screen and (max-width: 900px){
+      .change-to-column{
+     flex-direction: column;
+  }
+}

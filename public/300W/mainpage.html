@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PSU GO for Web</title>
+  <link rel="icon" href="https://pbs.twimg.com/profile_images/923203728810893312/eZPlhSq5_400x400.jpg">
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <link rel="icon" href="./images/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+  <script src="./mainpage.js"></script>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body class="h-100 bg-secondary">
+  <div class="bg-primary"> 
+    <div class="alert alert-danger alert-dismissible fade show" role="alert" id="alert" style="margin-bottom: 0">
+    <button id="alertCloseBtn" type="button" class="close btn btn-danger" onclick="closeAlert()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+  </div>
+  <div class="bg-primary text-end">
+    <button id="userPopOver"type="button" class="btn btn-outline-light mt-1 me-2" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Some content inside the popover" >
+    <div class="mb-0 text-light fw-bolder" id="constUser"></div>
+    </button>
+  </div>
+  <div class="jumbotron bg-primary">
+    <h1 class="d-flex display-4 justify-content-center pb-5 mb-0 fw-normal" id="welcome" style="padding-left: 10px">Hello, </h1>
+  </div>
+  <div id="content" class="d-inline-flex flex-fill justify-content-center bg-secondary mt-0 p-5 change-to-column">
+    
+  </div>
+</html>

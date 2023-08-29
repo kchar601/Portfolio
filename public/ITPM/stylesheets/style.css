@@ -1,0 +1,41 @@
+.body-dark{
+  background-color: black;
+}
+.body-light{
+  background-color: white;
+}
+.form-wrap{
+  padding: 2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.form-center{
+  margin-left: 25rem;
+  margin-right: 25rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#errormsg{
+  color: red;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.last{
+  margin-bottom: 2rem;
+}
+
+input[type="radio"]{
+  margin-left: 1rem;
+}
+
+.radio-label {
+  margin-left: .3rem;
+  font-weight: bold;
+}
+
+.button-center{
+  margin-left: 12rem;
+}

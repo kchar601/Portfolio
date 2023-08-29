@@ -1,0 +1,222 @@
+[
+    {
+      "id": "complexity-Xbox",
+      "name": "Complexity",
+      "questions": [
+        {
+          "id": "complexity-question-1",
+          "question": "How complex is the process or system?"
+        },
+        {
+          "id": "complexity-question-2",
+          "question": "How many different teams or departments are involved in the process?"
+        },
+        {
+          "id": "complexity-question-3",
+          "question": "How many different systems or technologies are involved in the process?"
+        }
+      ]
+    },
+    {
+      "id": "criticality-Xbox",
+      "name": "Business Criticality",
+      "questions": [
+        {
+          "id": "criticality-question-1",
+          "question": "How critical is the process or system to the business?"
+        },
+        {
+          "id": "criticality-question-2",
+          "question": "How much revenue or profit is dependent on the process or system?"
+        },
+        {
+          "id": "criticality-question-3",
+          "question": "What is the impact to customers or stakeholders if the process or system fails?"
+        }
+      ]
+    },
+    {
+      "id": "legal-Xbox",
+      "name": "Legal & Regulatory",
+      "questions": [
+        {
+          "id": "legal-question-1",
+          "question": "What are the legal or regulatory requirements that must be met by the process or system?"
+        },
+        {
+          "id": "legal-question-2",
+          "question": "What are the potential legal or regulatory penalties if the process or system fails to comply?"
+        },
+        {
+          "id": "legal-question-3",
+          "question": "What are the risks of legal or regulatory non-compliance?"
+        }
+      ]
+    },
+    {
+      "id": "financial-Xbox",
+      "name": "Financial",
+      "questions": [
+        {
+          "id": "financial-question-1",
+          "question": "What is the potential financial impact of the risk?"
+        },
+        {
+          "id": "financial-question-2",
+          "question": "What is the cost of implementing risk mitigation measures?"
+        },
+        {
+          "id": "financial-question-3",
+          "question": "What is the potential impact on the company's financial reputation?"
+        }
+      ]
+    },
+    {
+      "id": "people-Xbox",
+      "name": "People & Culture",
+      "questions": [
+        {
+          "id": "people-question-1",
+          "question": "What is the potential impact on employee morale or well-being?"
+        },
+        {
+          "id": "people-question-2",
+          "question": "What is the potential impact on customer or stakeholder trust or confidence?"
+        },
+        {
+          "id": "people-question-3",
+          "question": "What is the potential impact on the company's reputation or brand image?"
+        }
+      ]
+    },
+    {
+      "id": "processes-Xbox",
+      "name": "Process",
+      "questions": [
+        {
+          "id": "process-question-1",
+          "question": "How well-defined and documented is the process or system?"
+        },
+        {
+          "id": "process-question-2",
+          "question": "How much deviation from the process or system is allowed or tolerated?"
+        },
+        {
+            "id": "process-question-3",
+            "question": "How many potential points of failure or bottlenecks are in the process or system?"
+          }
+        ]
+      },
+        {
+          "id": "external-Xbox",
+          "name": "External Factors",
+          "questions": [
+            {
+              "id": "external-question-1",
+              "question": "How likely are external factors (e.g. weather, economy, etc.) to impact the process or system?"
+            },
+            {
+              "id": "external-question-2",
+              "question": "How much could external dependencies (e.g. suppliers, partners, etc.) impact the process or system?"
+            },
+            {
+              "id": "external-question-3",
+              "question": "How significant are the potential geopolitical risks that could impact the process or system?"
+            }
+          ]
+        },
+        {
+          "id": "security-Xbox",
+          "name": "Security",
+          "questions": [
+            {
+              "id": "security-question-1",
+              "question": "How likely are security threats to occur and exploit the system?"
+            },
+            {
+              "id": "security-question-2",
+              "question": "How vulnerable is the process or system to security threats?"
+            },
+            {
+              "id": "security-question-3",
+              "question": "How severe would the impact of a security breach be on the system?"
+            }
+          ]
+        },
+        {
+          "id": "integrity-Xbox",
+          "name": "Data Integrity",
+          "questions": [
+            {
+              "id": "integrity-question-1",
+              "question": "How important is data integrity for the process or system?"
+            },
+            {
+              "id": "integrity-question-2",
+              "question": "How severe are the potential consequences of data loss or corruption?"
+            },
+            {
+              "id": "integrity-question-3",
+              "question": "How confident are you in the measures in place to ensure data integrity?"
+            }
+          ]
+        },
+        {
+          "id": "architecture-Xbox",
+          "name": "Architecture",
+          "questions": [
+            {
+              "id": "architecture-question-1",
+              "question": "How well-designed is the system architecture?"
+            },
+            {
+              "id": "architecture-question-2",
+              "question": "How scalable is the system architecture?"
+            },
+            {
+              "id": "architecture-question-3",
+              "question": "Rate the potential points of failure or bottlenecks in the system architecture"
+            }
+          ]
+        },
+        {
+          "id": "network-Xbox",
+          "name": "Network",
+          "questions": [
+            {
+              "id": "network-question-1",
+              "question": "How reliable is the network infrastructure?"
+            },
+            {
+              "id": "network-question-2",
+              "question": "How secure is the network infrastructure?"
+            },
+            {
+              "id": "network-question-3",
+              "question": "What are the potential points of failure or bottlenecks in the network infrastructure?"
+            }
+          ]
+        },
+        {
+            "id": "software-Xbox",
+            "name": "Software",
+            "questions": [
+              {
+                "id": "software-question-1",
+                "question": "How well-tested is the software?"
+              },
+              {
+                "id": "software-question-2",
+                "question": "How complex is the software?"
+              },
+              {
+                "id": "software-question-3",
+                "question": "What are the potential points of failure or vulnerabilities in the software?"
+              }
+            ]
+          }
+        ]           
+      
+
+       
+  

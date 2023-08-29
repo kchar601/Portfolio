@@ -1,0 +1,24 @@
+{
+  "name": "webpage",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angularjs": "0.0.1",
+    "bootstrap": "^5.2.3",
+    "express": "^4.18.2",
+    "lit": "^2.6.1",
+    "node": "^18.13.0",
+    "request": "^2.88.2",
+    "serve-static": "^1.15.0"
+  },
+  "devDependencies": {
+    "bootstrap-css": "^4.0.0-alpha.5"
+  }
+}
