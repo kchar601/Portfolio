@@ -7,8 +7,7 @@ const bodyParser = require('body-parser');
 const app = express()
 const port = 80
 app.use(express.static('public'))
-const { OpenAIApi } = require("openai");
-const Configuration = require("openai").Configuration;
+const OpenAI = require("openai");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -20,10 +19,9 @@ app.get('/getUser', function(req,res){
   
 })
 
-const configuration = new Configuration({
-  apiKey: "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",
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
 });
-const openai = new OpenAIApi(configuration);
 
 app.post('/sendtoGPT', async (req, res) => {
   const messages = [];
@@ -41,7 +39,7 @@ app.post('/sendtoGPT', async (req, res) => {
   ];
   
   try {
-    const completion = await openai.createChatCompletion({
+    const completion = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
       messages: data,
     });
