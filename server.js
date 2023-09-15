@@ -6,7 +6,7 @@ var {readFile} = require('fs/promises');
 const bodyParser = require('body-parser');
 const result = require('dotenv').config();
 const app = express()
-const port = 80
+const port = 3000
 app.use(express.static('public'))
 const OpenAI = require("openai");
 
