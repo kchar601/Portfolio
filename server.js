@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const app = express()
 const port = 80
 app.use(express.static('public'))
-import { Configuration, OpenAIApi } from "openai";
+const { Configuration, OpenAIApi } = require("openai");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
