@@ -4,7 +4,7 @@ var cookie = require('cookie');
 var mongoose = require('mongoose');
 var {readFile} = require('fs/promises');
 const bodyParser = require('body-parser');
-require('dotenv').config();
+const result = require('dotenv').config();
 const app = express()
 const port = 80
 app.use(express.static('public'))
