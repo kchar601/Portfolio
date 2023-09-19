@@ -98,7 +98,7 @@ function login(){
 }
 
 function addQuestions() {
-    $.getJSON("../data/further-question.json", function(json) {
+    $.getJSON("./data/further-question.json", function(json) {
       json.forEach(line => {
         if ($("#" + line.id).prop("checked") == true) {
           $("#complexity-Xbox-questions").append("<h3>" + line.name + "</h3>");
