@@ -12,64 +12,12 @@
 </head>
   <!--  Sidebar Start  -->
 <body>
-<div id="sidebar" class="d-flex flex-column navbar bg-black border border-dark justify-content-center sidebar" style="position: sticky;">
-  <img src="images/headshot1.jpg" class="img-button">
-  <div id="links" class="nav-bar-btn d-flex" style="width:fit-content">
-    <button class="btn btn-black border-dark glow-effect" style="width:fit-content" title="Link to my Github profile">
-      <img src="images/github-mark-white.png" class="profile-link">
-      <svg class="glow-container">
-        <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
-        <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
-      </svg>
-    </button>
-    <button class="btn btn-black border-dark glow-effect" style="width:fit-content" title="Link to my LinkedIn profile">
-      <img src="images/linkedin-square-white-icon-transparent-png-11640440452zi2ykndpw2.png" class="profile-link">
-      <svg class="glow-container">
-        <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
-        <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
-      </svg>
-    </button>
-    <button class="btn btn-black border-dark glow-effect" style="width:fit-content" title="Link to my portfolio">
-      <img src="./images/port_icon.png" class="profile-link-wide">
-      <svg class="glow-container">
-        <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
-        <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
-      </svg>
-    </button>
-  </div>
-  <div class="justify-content-center"> 
-    <button class="btn btn-black nav-link nav-bar-btn text-light align-middle glow-effect" onclick="window.location.href ='http://kchar.us/#welcome-text';">Home
-      <svg class="glow-container">
-        <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
-        <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
-      </svg>
-    </button>
-    <button class="btn btn-black nav-link nav-bar-btn text-light align-middle glow-effect" onclick="window.location.href ='http://kchar.us/#about';">About
-      <svg class="glow-container">
-        <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
-        <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
-      </svg>
-    </button>
-    <button class="btn btn-black nav-link nav-bar-btn text-light align-middle glow-effect" onclick="window.location.href ='http://kchar.us/#resume';">Resume
-      <svg class="glow-container">
-        <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
-        <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
-      </svg>
-    </button>
-    <button class="btn btn-black nav-link nav-bar-btn text-light align-middle glow-effect" onclick="window.location.href ='http://kchar.us/#portfolio';">Portfolio
-      <svg class="glow-container">
-        <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
-        <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
-      </svg>
-    </button>
-    <button class="btn btn-black nav-link nav-bar-btn text-light align-middle glow-effect" onclick="window.location.href ='http://kchar.us/#contact';">Contact
-      <svg class="glow-container">
-        <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
-        <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
-      </svg>
-    </button>
-  </div>
-</div>
+  <div id="nav-bar"></div>
+  <script>
+    $(function(){
+      $("#nav-bar").load("nav-bar.html"); 
+    });
+  </script>
 
 <!--  Sidebar End  -->
 
@@ -77,8 +25,8 @@
 <div id="wrapper" class="sidebar-offset bg-main" style="top:0;">
   <div id="welcome-text" class="d-flex text-box section-header" style="margin-top: 0; font-size: 4rem;">Hey There!&nbsp;<div style="color:#062F4F; font-size: 2rem; padding-top:2.3rem">Welcome to my website.</div></div>
   <div id="about" class="section-header text-box text-box-animation hover-underline-animation" style="padding: 0; padding-left: 10px;">About Me</div>
-  <div class="d-inline-flex text-box">
-    Fusce rutrum nisi sapien, nec sollicitudin felis finibus iaculis. Nulla egestas a sem id pulvinar. Duis non mi vitae mauris condimentum placerat. Cras a placerat turpis. Sed tristique, felis ac ultrices consectetur, metus magna porta nunc, ultrices lobortis urna leo non turpis. Morbi luctus lorem nec eros consequat tincidunt. Phasellus elementum risus at tortor bibendum mattis. Aliquam tincidunt suscipit leo, in faucibus ex lacinia a.
+  <div class="text-box aboutMe">
+    
   </div>
   <div class="bg-ink text-main" style="padding: 10px 0 10px 0;">
     <div id="resume" class="section-header text-box text-whitesmoke text-box-animation hover-underline-animation" style="padding: 0; padding-left: 10px;">Resume</div>
@@ -86,7 +34,7 @@
     <p class="d-flex sub-header" style="font-size: 2rem;">Education:</p>  
       <h4 class="bullet" style="font-style: underline;">The Pennsylvania State University</h4>
       <h5 class="bullet2">Enterprise Technology Integration, B.S.</h5>
-      <h5 class="bullet2">Smeal College Business Fundamentals, Certificate</h5>
+      <h5 class="bullet2">Application Development Focus Area</h5>
       <h5 class="bullet2">Expected Graduation: May 2024</h5>
       <h5 class="bullet2">Cumulative GPA: 3.65</h5>
     </div>
@@ -179,8 +127,8 @@
         <h5 class="mt-3 ps-3">Note: Some projects have become deprecated, due to changes in hosting, API requirements, etc.</h5>
         <h6 class="ps-3">As I am currently in the process of reworking these, I appreciate your patience</h6>
       </div> 
-    <div id="about" class="section-header text-box text-box-animation hover-underline-animation" style="padding: 0; padding-left: 10px;"><form action="mailto:charltonkeith8@gmail.com"><input type="submit" value="Contact"></form></div>
-    <div class="section-header text-box"style="color:#062F4F; font-size: 2rem; margin-bottom:0;">Click the header above to shoot me an email</div>
+    <!-- <div id="about" class="section-header text-box text-box-animation hover-underline-animation" style="padding: 0; padding-left: 10px;"><form action="mailto:charltonkeith8@gmail.com"><input type="submit" value="Contact"></form></div>
+    <div class="section-header text-box"style="color:#062F4F; font-size: 2rem; margin-bottom:0;">Click the header above to shoot me an email</div> -->
   </div>
 </body>
 </html>

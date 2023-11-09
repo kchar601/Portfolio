@@ -1,13 +1,19 @@
-(function setGlowEffectRx() {
-    const glowEffects = document.querySelectorAll(".glow-effect");
-  
-    glowEffects.forEach((glowEffect) => {
-      const glowLines = glowEffect.querySelectorAll("rect");
-      
+  function loadAboutMe() {
+    const target = document.querySelector('.aboutMe');
+    fetch('./aboutme.json')
+    .then((response) => response.json())
+    .then((json) => {
+      console.log(json);
+      json.forEach((line) => {
+      const p = document.createElement('p');
+      p.innerHTML = line.text;
+      target.appendChild(p);
+      }
+      )
+    })
 
-        const rx = getComputedStyle(glowEffect).borderRadius;
-        glowLines.forEach((line) => {
-          line.setAttribute("rx", rx);
-        })
-      ;})
-  })();
+  }
+
+  window.onload = function() {
+    loadAboutMe();
+  };

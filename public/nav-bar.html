@@ -1,0 +1,85 @@
+<link href="./styles/index.css" rel="stylesheet">
+<div id="sidebar" class="d-flex flex-column navbar bg-black border border-dark justify-content-center sidebar">
+    <img src="images/headshot1.jpg" class="img-button">
+    <div id="links" class="nav-bar-btn d-flex" style="width:fit-content">
+      <button class="btn btn-black border-dark glow-effect" style="width:fit-content" title="Link to my Github profile">
+        <img src="images/github-mark-white.png" class="profile-link">
+        <svg class="glow-container">
+          <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+          <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+        </svg>
+      </button>
+      <button class="btn btn-black border-dark glow-effect" style="width:fit-content" title="Link to my LinkedIn profile">
+        <img src="images/linkedin-square-white-icon-transparent-png-11640440452zi2ykndpw2.png" class="profile-link">
+        <svg class="glow-container">
+          <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+          <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+        </svg>
+      </button>
+      <button class="btn btn-black border-dark glow-effect" style="width:fit-content" title="Link to my portfolio">
+        <img src="./images/port_icon.png" class="profile-link-wide">
+        <svg class="glow-container">
+          <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+          <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+        </svg>
+      </button>
+    </div>
+    <div class="justify-content-center"> 
+      <button class="btn btn-black nav-link nav-bar-btn text-light align-middle glow-effect" onclick="window.location.href ='/#welcome-text';">Home
+        <svg class="glow-container">
+          <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+          <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+        </svg>
+      </button>
+      <button class="btn btn-black nav-link nav-bar-btn text-light align-middle glow-effect" onclick="window.location.href ='/#about';">About
+        <svg class="glow-container">
+          <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+          <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+        </svg>
+      </button>
+      <button class="btn btn-black nav-link nav-bar-btn text-light align-middle glow-effect" onclick="window.location.href ='/#resume';">Resume
+        <svg class="glow-container">
+          <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+          <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+        </svg>
+      </button>
+      <button class="btn btn-black nav-link nav-bar-btn text-light align-middle glow-effect" onclick="window.location.href ='/#portfolio';">Portfolio
+        <svg class="glow-container">
+          <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+          <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+        </svg>
+      </button>
+      <button class="btn btn-black nav-link nav-bar-btn text-light align-middle glow-effect" onclick="window.location.href ='/blog.html';">Blog
+        <svg class="glow-container">
+          <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+          <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    (function setGlowEffectRx() {
+    const glowEffects = document.querySelectorAll(".glow-effect");
+  
+    glowEffects.forEach((glowEffect) => {
+      const glowLines = glowEffect.querySelectorAll("rect");
+      
+
+        const rx = getComputedStyle(glowEffect).borderRadius;
+        glowLines.forEach((line) => {
+          line.setAttribute("rx", rx);
+        })
+      ;})
+  })();
+  </script>
+  <style>
+    .sidebar {
+        position: fixed;
+        top: 0;
+        width: 192px;
+        height: 100vh;
+        float: left;
+        z-index: 9999;
+    }
+    </style>

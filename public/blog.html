@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <link rel="icon" href="./images/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">    <link href="./styles/index.css" rel="stylesheet">
+</head>
+<body class="bg-main">
+    <div id="nav-bar"></div>
+    <script>
+      $(function(){
+        $("#nav-bar").load("nav-bar.html"); 
+      });
+    </script>
+    <div class="sidebar-offset" style="top:0;">
+    <div class="tab-wrapper border-bottom border-ink">
+        <button onclick="loadArticle(0)" class="bg-ink text-whitesmoke rounded-top border border-ink tab">The Role of Web Components in Streamlining Web Development</button>
+        <button onclick="loadArticle(1)" class="bg-ink text-whitesmoke rounded-top border border-ink tab">The Importance of UI/UX in Digital Product Success</button>
+        <button onclick="loadArticle(2)" class="bg-ink text-whitesmoke rounded-top border border-ink tab">JavaScript's Evolution: From First Code to Global Standard</button>
+    </div>
+    <div class="active-article"></div>
+    </div>
+    <script>
+    function loadArticle(articleNum){
+        const target = document.querySelector('.active-article');
+        target.innerHTML = '';
+        fetch('./articles.json')
+        .then((response) => response.json())
+        .then((json) => {
+        console.log(json);
+        currentArticle = json[articleNum];
+        const title = document.createElement('h1');
+        title.innerText = currentArticle.title;
+        target.appendChild(title);
+        const articleText = currentArticle.text;
+        Object.values(articleText).forEach((line) => {
+        const p = document.createElement('p');
+        p.innerHTML = line;
+        target.appendChild(p);
+        }
+        )
+        })
+
+    }
+
+    window.onload = function() {
+        loadArticle(0);
+    };
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@700&family=Georama:wght@400;700&display=swap');
+
+        .sidebar-offset{
+            margin-left: 192px;
+            min-height: 100vh;
+            height: 100%;
+        }
+        .tab-wrapper{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .bg-ink{
+            background-color: #062F4F !important;
+        }
+        .border-ink{
+            border-color: #062F4F !important;
+        }
+        button{
+            text-wrap:nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 4px 8px;
+        }
+        .text-whitesmoke{
+            color: whitesmoke;
+        }
+
+        .active-article{
+            padding: 16px 64px 16px 32px;
+        }
+
+        p{
+            padding-right: 32px;
+            font-size: 16px;
+            font-family: 'Georama';
+        }
+
+        .tab{
+            font-family: 'Gabarito';
+            font-size: 20px;
+        }
+
+        h1{
+            font-family: 'Gabarito';
+            font-size: 32px;
+        }
+
+    </style>
+</body>
+</html>

@@ -55,7 +55,7 @@ html,body
     background-color: #B82601;
   }
 
-@keyframes fadeIn {
+/* @keyframes fadeIn {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -64,7 +64,7 @@ html,body
     opacity: 1;
     transform: translateY(0);
   }
-  }
+  } */
 .text-whitesmoke{
   color: whitesmoke;
   }
@@ -84,14 +84,7 @@ html,body
   font-size: 3rem;
   font-weight: bold;
   }
-.sidebar {
-  position: sticky;
-  top: 0;
-  width: 192px;
-  height: 100vh;
-  float: left;
-  z-index: 9999;
-}
+
 .sidebar-offset{
   margin-left: 192px;
   }
