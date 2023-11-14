@@ -17,9 +17,9 @@
     </script>
     <div class="sidebar-offset" style="top:0;">
     <div class="tab-wrapper border-bottom border-ink">
-        <button onclick="loadArticle(0)" class="bg-ink text-whitesmoke rounded-top border border-ink tab">The Role of Web Components in Streamlining Web Development</button>
-        <button onclick="loadArticle(1)" class="bg-ink text-whitesmoke rounded-top border border-ink tab">The Importance of UI/UX in Digital Product Success</button>
-        <button onclick="loadArticle(2)" class="bg-ink text-whitesmoke rounded-top border border-ink tab">JavaScript's Evolution: From First Code to Global Standard</button>
+        <button id='tab0' onclick="loadArticle(0);" class="bg-ink text-whitesmoke rounded-top border border-ink tab active">The Role of Web Components in Streamlining Web Development</button>
+        <button id='tab1' onclick="loadArticle(1)" class="bg-ink text-whitesmoke rounded-top border border-ink tab">The Importance of UI/UX in Digital Product Success</button>
+        <button id='tab2' onclick="loadArticle(2)" class="bg-ink text-whitesmoke rounded-top border border-ink tab">JavaScript's Evolution: From First Code to Global Standard</button>
     </div>
     <div class="active-article"></div>
     </div>
@@ -27,6 +27,12 @@
     function loadArticle(articleNum){
         const target = document.querySelector('.active-article');
         target.innerHTML = '';
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach((tab) => {
+            tab.classList.remove('active');
+        });
+        const tab = document.querySelector(`#tab${articleNum}`);
+        tab.classList.add('active');
         fetch('./articles.json')
         .then((response) => response.json())
         .then((json) => {
@@ -98,6 +104,10 @@
             font-size: 32px;
         }
 
+        .active{
+            background-color: white !important;
+            color: #062F4F !important;
+        }
     </style>
 </body>
 </html>
