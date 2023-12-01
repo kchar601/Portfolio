@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dive into Keith Charlton's blog for thought-provoking articles on technology trends, coding tutorials, and insights into the world of software development.">
     <title>Blog Posts</title>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <link rel="icon" href="./images/favicon.ico">
@@ -24,90 +25,10 @@
     <div class="active-article"></div>
     </div>
     <script>
-    function loadArticle(articleNum){
-        const target = document.querySelector('.active-article');
-        target.innerHTML = '';
-        const tabs = document.querySelectorAll('.tab');
-        tabs.forEach((tab) => {
-            tab.classList.remove('active');
-        });
-        const tab = document.querySelector(`#tab${articleNum}`);
-        tab.classList.add('active');
-        fetch('./articles.json')
-        .then((response) => response.json())
-        .then((json) => {
-        console.log(json);
-        currentArticle = json[articleNum];
-        const title = document.createElement('h1');
-        title.innerText = currentArticle.title;
-        target.appendChild(title);
-        const articleText = currentArticle.text;
-        Object.values(articleText).forEach((line) => {
-        const p = document.createElement('p');
-        p.innerHTML = line;
-        target.appendChild(p);
-        }
-        )
-        })
-
-    }
-
-    window.onload = function() {
-        loadArticle(0);
-    };
+        function loadArticle(e){let t=document.querySelector(".active-article");t.innerHTML="";let l=document.querySelectorAll(".tab");l.forEach(e=>{e.classList.remove("active")});let a=document.querySelector(`#tab${e}`);a.classList.add("active"),fetch("./articles.json").then(e=>e.json()).then(l=>{console.log(l),currentArticle=l[e];let a=document.createElement("h1");a.innerText=currentArticle.title,t.appendChild(a);let n=currentArticle.text;Object.values(n).forEach(e=>{let l=document.createElement("p");l.innerHTML=e,t.appendChild(l)})})}window.onload=function(){loadArticle(0)};
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@700&family=Georama:wght@400;700&display=swap');
-
-        .sidebar-offset{
-            margin-left: 192px;
-            min-height: 100vh;
-            height: 100%;
-        }
-        .tab-wrapper{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-        .bg-ink{
-            background-color: #062F4F !important;
-        }
-        .border-ink{
-            border-color: #062F4F !important;
-        }
-        button{
-            text-wrap:nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            padding: 4px 8px;
-        }
-        .text-whitesmoke{
-            color: whitesmoke;
-        }
-
-        .active-article{
-            padding: 16px 64px 16px 32px;
-        }
-
-        p{
-            padding-right: 32px;
-            font-size: 16px;
-            font-family: 'Georama';
-        }
-
-        .tab{
-            font-family: 'Gabarito';
-            font-size: 20px;
-        }
-
-        h1{
-            font-family: 'Gabarito';
-            font-size: 32px;
-        }
-
-        .active{
-            background-color: white !important;
-            color: #062F4F !important;
-        }
+        @import url(https://fonts.googleapis.com/css2?family=Gabarito:wght@700&family=Georama:wght@400;700&display=swap);.sidebar-offset{margin-left:192px;min-height:100vh;height:100%}.tab-wrapper{display:grid;grid-template-columns:1fr 1fr 1fr}.bg-ink{background-color:#062f4f!important}.border-ink{border-color:#062f4f!important}button{text-wrap:nowrap;overflow:hidden;text-overflow:ellipsis;padding:4px 8px}.text-whitesmoke{color:#f5f5f5}.active-article{padding:16px 64px 16px 32px}p{padding-right:32px;font-size:16px;font-family:Georama}.tab,h1{font-family:Gabarito}.tab{font-size:20px}h1{font-size:32px}.active{background-color:#fff!important;color:#062f4f!important}
     </style>
 </body>
 </html>
